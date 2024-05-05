@@ -94,7 +94,8 @@ if (validateForm()) {
         <div>
             <label htmlFor="password">Password</label>
         <input 
-        id="password" 
+        id="password"
+        type="password" 
         value={formFields.password} 
         onChange={(e)=>{
             setFormFields((currentState) => ({

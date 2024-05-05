@@ -13,7 +13,6 @@ export function LoginForm() {
   
       const login = formData.get("login");
       const password = formData.get("password");
-  
       try {
         const response = await fetch("http://localhost:3000/api/user/login", {
           method: "POST",
@@ -23,7 +22,7 @@ export function LoginForm() {
           credentials: "include",
           body: JSON.stringify({
             login,
-            password,
+            password
           }),
         });
   
@@ -41,8 +40,7 @@ export function LoginForm() {
           console.log("Login successful, navigating to the main page");
           navigate("/");
         } else {
-          const errorData = await response.json(); 
-          setError(errorData.message);
+          setError("Bad credentials");
         }
       } catch (error) {
         console.error("Error:", error);

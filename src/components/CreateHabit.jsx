@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 
-export const Habit = (props) => {
+export const Habit = () => {
     const [formFields, setFormFields] = useState({
         name: '',
         description: '',
@@ -38,10 +38,11 @@ export const Habit = (props) => {
                     body: JSON.stringify(formFields),
                 });
                 if (response.ok) {
-                    console.log('Habit successfully created');
-                    props.refreshHabits();
+                    console.log('Habit successfully created ');
+                    setShowForm(false)
                 } else {
                     console.error('Habit creation failed');
+                    setShowForm(false)
                 }
             } catch (error) {
                 console.error('Error((', error);
@@ -55,7 +56,7 @@ export const Habit = (props) => {
 
     return (
         <div>
-            <button onClick={() => setShowForm(true)}>Create Habit</button>
+            <button onClick={() => setShowForm(!showForm)}>Create Habit</button>
             {showForm && (
                 <form onSubmit={handleSubmit}>
                     <label>

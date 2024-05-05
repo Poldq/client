@@ -16,11 +16,13 @@ export const DisplayedHabits = ({ habits }) => {
                                 <td>{habit.name}</td>
                                 <td>{habit.description}</td>
                                 <td>{habit.status}</td>
+                                <td>{habit.streak}</td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
-            ) : (
+            
+        ) : (
                 <div>No habits to display</div>
             )}
         </div>

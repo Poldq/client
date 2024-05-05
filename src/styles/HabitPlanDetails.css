@@ -15,12 +15,12 @@
     height: 100%;
 }
 
-.habitPlanValue {
+/* .habitPlanValue {
     position: absolute;
-    top: 0; 
-    left: 0; 
-    margin: 0;
-    padding: 0;
+    top: 100; 
+    left: 100; 
+    margin: 100;
+    padding: 100;
     font-size: 18px;
     color: #333;
-}
+} */
