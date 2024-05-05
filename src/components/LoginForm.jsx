@@ -39,7 +39,6 @@ export function LoginForm() {
             isAuthenticated: true,
           }));
           console.log("Login successful, navigating to the main page");
-          // Redirect to main page after successful login
           navigate("/");
         } else {
           const errorData = await response.json(); 

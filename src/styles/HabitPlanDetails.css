@@ -17,8 +17,8 @@
 
 .habitPlanValue {
     position: absolute;
-    top: 0; /* Change this value to adjust the position from the top */
-    left: 0; /* Change this value to adjust the position from the left */
+    top: 0; 
+    left: 0; 
     margin: 0;
     padding: 0;
     font-size: 18px;
