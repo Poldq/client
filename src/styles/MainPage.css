@@ -1,0 +1,116 @@
+
+.site-title {
+    font-size: 2rem; 
+    text-decoration: none;
+    color: #333; 
+}
+
+
+.nav ul {
+    padding: 0; 
+    margin: 0; 
+    list-style: none; 
+    display: flex; 
+    gap: 1rem; 
+}
+
+
+.nav a {
+    color: #333;
+    text-decoration: none;
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+    padding: 0.25em; 
+}
+
+
+.nav button {
+    font-size: 1rem; 
+    padding: 0.5rem 1rem; 
+    border: none; 
+    border-radius: 0.25rem; 
+    background-color: #ccc; 
+    color: #333; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+
+.nav button:hover {
+    background-color: #bbb; 
+}
+
+
+.nav button:focus {
+    outline: none;
+}
+
+
+.nav .user-info {
+    display: flex; 
+    align-items: center; 
+}
+
+
+.nav .user-info span {
+    margin-right: 1rem; 
+}
+
+
+.habit-plan-form {
+    padding: 1rem; 
+    background-color: #f9f9f9;
+    border: 1px solid #ccc; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+
+.habit-plan-details {
+    padding: 1rem; 
+    background-color: #f0f0f0; 
+    border: 1px solid #ddd;
+    border-radius: 0.5rem; 
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-color: #f9f9f9; 
+    color: #333; 
+    padding: 10px 0; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+
+.navbar a {
+    color: #333; 
+    text-decoration: none; 
+    margin-right: 20px; 
+}
+
+
+.navbar a:last-child {
+    margin-right: 0; 
+}
+
+/* Styling for the habit track header */
+.habit-track-header {
+    position: absolute; /* Fix position */
+    top: 0; /* Align to top */
+    left: 0; /* Align to left */
+    padding: 10px; /* Set padding */
+}

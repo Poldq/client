@@ -1,0 +1,26 @@
+.habitPlanContainer {
+    position: relative;
+    width: 1300px;
+    height: 650px;
+    background-color: #a3a2a99c;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.habitPlanRectangle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.habitPlanValue {
+    position: absolute;
+    top: 0; /* Change this value to adjust the position from the top */
+    left: 0; /* Change this value to adjust the position from the left */
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: #333;
+}
