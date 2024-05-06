@@ -52,3 +52,24 @@
 .habitActions button:hover {
     background-color: #0056b3;
 }
+
+
+.habitButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.habitsContainer {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: flex-start;
+}
+
+.habitsContainer .habit-item {
+    display: space-between;
+    margin: 40px;
+    justify-content: center;
+    flex: wrap;
+}

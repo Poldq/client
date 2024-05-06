@@ -1,3 +1,4 @@
+// HabitPlanDetails.js
 
 import React, { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../utils/contexts/UserContext';
@@ -5,9 +6,8 @@ import { HabitPlanContext } from '../utils/contexts/HabitPlanContext';
 import { DeleteHabitPlan } from './DeleteHabitPlan';
 import { Habit } from './CreateHabit';
 import { DisplayedHabits } from './DisplayHabits';
-import {DeleteHabit} from './DeleteHabit';
+import { DeleteHabit } from './DeleteHabit';
 import '../styles/HabitPlanDetails.css';
-
 
 export const HabitPlanDetails = () => {
     const habitPlanContextData = useContext(HabitPlanContext);
@@ -29,15 +29,7 @@ export const HabitPlanDetails = () => {
                     const data = await response.json();
                     setHabitPlan(data.habitPlan);
                     setHabits(data.habits);
-                
-                }
-                else if (response.status === 401) {
-                    userContextData.setUserData((currentState) => ({
-                        ...currentState,
-                        isAuthenticated: false
-                    }))
-                }
-                 else {
+                } else {
                     userContextData.setUserData((currentState) => ({
                         ...currentState,
                         hasHabitPlan: true,
@@ -65,7 +57,8 @@ export const HabitPlanDetails = () => {
             if (response.ok) {
                 setRefreshHabits((prev) => !prev);
                 console.log('Habit created successfully');
-            } else {
+            
+                     }else {
                 console.error('Failed to create habit');
             }
         } catch (error) {
@@ -88,6 +81,7 @@ export const HabitPlanDetails = () => {
         <div className="habitPlanContainer">
             <h2></h2>
             {habitPlan && (
+                <div> 
                 <div>
                     <ul>
                         <li>
@@ -102,17 +96,18 @@ export const HabitPlanDetails = () => {
                         <li>
                             <DeleteHabitPlan />
                         </li>
-                        <li>
-                            <Habit onCreate={createHabit} /> 
-                        </li>
-                        <li>
-                            <DisplayedHabits habits={habits} />
-                        </li>
                     </ul>
+                </div>
+                <div>    
+                    <div className="habitButtonContainer">
+                        <Habit onCreate={createHabit} /> 
+                    </div>
+                    <div>
+                    <DisplayedHabits habits={habits} />
+                    </div>
+                </div>
                 </div>
             )}
         </div>
     );
 };
-
-
