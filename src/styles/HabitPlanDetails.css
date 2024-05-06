@@ -1,12 +1,12 @@
 .habitPlanContainer {
     position: relative;
-    width: 1300px;
+    width: 1000px;
     height: 650px;
     background-color: #a3a2a99c;
     border: 1px solid #ffffff;
     border-radius: 20px;
     padding: 10px;
-    margin: 10px;
+    margin: 50px;
 }
 
 .habitPlanRectangle {
@@ -15,12 +15,40 @@
     height: 100%;
 }
 
-/* .habitPlanValue {
+.habitPlanValue {
     position: absolute;
-    top: 100; 
-    left: 100; 
-    margin: 100;
-    padding: 100;
+    top: 0; 
+    left: 0; 
+    margin: 0;
+    padding: 0;
     font-size: 18px;
-    color: #333;
-} */
+    color: #212121;
+}
+
+
+.habitDetails {
+    margin-bottom: 20px;
+}
+
+.habitDetails p {
+    margin: 5px 0;
+}
+
+.habitActions {
+    display: flex;
+    align-items: center;
+}
+
+.habitActions button {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.habitActions button:hover {
+    background-color: #0056b3;
+}

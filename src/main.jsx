@@ -7,8 +7,8 @@ import {RegisterForm} from './components/RegisterForm.jsx';
 import {MainPage} from './components/MainPage.jsx';
 import {LoginForm} from './components/LoginForm.jsx';
 import {LogoutButton} from './components/LogoutButton.jsx';
-import { DeleteHabitPlan } from './components/DeleteHabitPlan.jsx';
-import { DisplayedHabits } from './components/DisplayHabits.jsx';
+import { HabitPlanDetails } from './components/HabitPlanDetails.jsx';
+import { HabitPlanForm } from './components/CreateHabitPlanForm.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,13 +32,13 @@ const router = createBrowserRouter([
         element: <LogoutButton/>,
       },
       {
-        path:"/delete",
-        element: <DeleteHabitPlan />,
+        path: "/habitPlanDetails",
+        element: <HabitPlanDetails />
       },
       {
-        path:"/habits",
-        element: <DisplayedHabits />
-      }
+        path: "/habitPlan",
+        element: <HabitPlanForm />
+      },
     ],
   },
 ]);

@@ -1,9 +1,9 @@
-export function DeleteHabit({habit}) {
+export function DeleteHabit({habitID}) {
 
 const handleDelete = async (event) => {
     try {
       const response = await fetch(
-        `http://localhost:3000/habitPlan/habits/${habit._id}`,
+        `http://localhost:3000/api/habitPlan/habits/${habitID}`,
         {
           method: "DELETE",
           headers: {
@@ -15,6 +15,7 @@ const handleDelete = async (event) => {
       if (response.ok) {
         console.log("Deletion success. Refresh page", "success");
       }
+      
     } catch (err) {
       console.log("Deletion failed", "error");
     }

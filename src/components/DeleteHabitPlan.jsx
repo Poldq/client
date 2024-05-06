@@ -24,6 +24,13 @@ export function DeleteHabitPlan() {
                 console.log("Successfully deleted");
 
             }
+
+            else if (response.status === 401) {
+                setUserData((currentState) => ({
+                    ...currentState,
+                    isAuthenticated: false
+                }))
+            }
         }catch (err) {
             console.log("Deletion failed", "error");
         }

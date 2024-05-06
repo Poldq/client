@@ -29,7 +29,15 @@ export const HabitPlanDetails = () => {
                     const data = await response.json();
                     setHabitPlan(data.habitPlan);
                     setHabits(data.habits);
-                } else {
+                
+                }
+                else if (response.status === 401) {
+                    userContextData.setUserData((currentState) => ({
+                        ...currentState,
+                        isAuthenticated: false
+                    }))
+                }
+                 else {
                     userContextData.setUserData((currentState) => ({
                         ...currentState,
                         hasHabitPlan: true,

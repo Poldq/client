@@ -1,4 +1,49 @@
 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.navbar a:last-child {
+    margin-right: 0;
+}
+
+.habit-track-header {
+    display: flex;
+    align-items: center;
+}
+
+.habit-track-header .user-info {
+    margin-right: auto; /* Push Logout button to the right */
+}
+
+.site-title {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #333;
+}
+
+
 .site-title {
     font-size: 2rem; 
     text-decoration: none;
@@ -107,10 +152,10 @@
     margin-right: 0; 
 }
 
-/* Styling for the habit track header */
+
 .habit-track-header {
-    position: absolute; /* Fix position */
-    top: 0; /* Align to top */
-    left: 0; /* Align to left */
-    padding: 10px; /* Set padding */
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    padding: 10px; 
 }
